@@ -1,0 +1,52 @@
+{
+  "name": "@chencc/components",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "env": "node ./src/env.js",
+    "build": "vue-tsc --noEmit && vite build && npm run env",
+    "previewComment": "预览打包",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/test-utils": "^2.0.2",
+    "happy-dom": "^6.0.4",
+    "lodash-es": "^4.17.21",
+    "rollup-plugin-delete": "^2.0.0",
+    "sass": "^1.54.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.4.1",
+    "vitest": "^0.23.1",
+    "vue-tsc": "^0.40.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/chencc.umd.js",
+  "module": "./dist/chencc.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/chencc.es.js",
+      "require": "./dist/chencc.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chendj89/components.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
