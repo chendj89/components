@@ -35,7 +35,7 @@ function backMenu() {}
     </div>
     <div class="vp-tool-content" :class="{ active: list.length }">
       <div class="vp-tool-btn" v-if="list.length" @click="backMenu">
-        <MdiLightArrangeSendToBack></MdiLightArrangeSendToBack>
+       
       </div>
       <a
         v-for="item in list"
