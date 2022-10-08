@@ -13,9 +13,13 @@ const menu: any = [];
 const list: any[] = [];
 const rightMenu = (item: any) => {};
 function backMenu() {}
+
+
+
 </script>
 <template>
   <div class="vp-tool">
+    <div class="vp-tool-name">名称</div>
     <div
       class="vp-tool-content"
       v-for="item in menu"
@@ -52,12 +56,16 @@ function backMenu() {}
 <style lang="scss" scoped>
 .vp {
   &-tool {
+    --vp-tool-name:#f00;
     position: fixed;
     left: 0;
     bottom: 10px;
     width: 100%;
     z-index: 999;
     text-align: center;
+    &-name {
+      color:var(--vp-tool-name)
+    }
     &-content {
       position: absolute;
       left: 50%;

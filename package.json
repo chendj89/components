@@ -1,6 +1,6 @@
 {
   "name": "@chencc/components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -48,5 +48,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "volta": {
+    "node": "16.17.0"
   }
 }

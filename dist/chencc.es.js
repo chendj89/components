@@ -1,76 +1,72 @@
-import { defineComponent as y, ref as x, resolveComponent as C, openBlock as t, createElementBlock as o, Fragment as i, renderList as p, createElementVNode as u, normalizeClass as m, withModifiers as M, createBlock as v, resolveDynamicComponent as g, createVNode as B, createCommentVNode as O } from "vue";
-const S = { class: "vp-tool" }, T = ["href", "target", "onContextmenu"], V = ["href", "target"], j = /* @__PURE__ */ y({
+import { defineComponent as h, ref as y, openBlock as o, createElementBlock as c, Fragment as i, renderList as u, createElementVNode as r, normalizeClass as v, withModifiers as x, createBlock as m, resolveDynamicComponent as f, createCommentVNode as C, pushScopeId as M, popScopeId as S } from "vue";
+const I = (e) => (M("data-v-ba78cfb8"), e = e(), S(), e), O = { class: "vp-tool" }, j = /* @__PURE__ */ I(() => /* @__PURE__ */ r("div", { class: "vp-tool-name" }, "\u540D\u79F0", -1)), B = ["href", "target", "onContextmenu"], V = ["href", "target"], w = /* @__PURE__ */ h({
   __name: "index",
   props: {
     msg: null
   },
-  setup(c, { expose: s }) {
-    const n = c;
-    let l = x(n.msg);
+  setup(e, { expose: s }) {
+    const n = e;
+    let l = y(n.msg);
     s({
       updateMsg: (_) => {
         l.value = _;
       },
       props: n
     });
-    const f = [], a = [], k = (_) => {
+    const g = [], p = [], b = (_) => {
     };
-    function h() {
+    function k() {
     }
-    return (_, A) => {
-      const b = C("MdiLightArrangeSendToBack");
-      return t(), o("div", S, [
-        (t(), o(i, null, p(f, (e) => u("div", {
-          class: m(["vp-tool-content", { active: e.active }]),
-          key: e.name
+    return (_, F) => (o(), c("div", O, [
+      j,
+      (o(), c(i, null, u(g, (t) => r("div", {
+        class: v(["vp-tool-content", { active: t.active }]),
+        key: t.name
+      }, [
+        (o(!0), c(i, null, u(t.children, (a) => (o(), c("a", {
+          key: a.name,
+          class: "vp-tool-btn",
+          href: a.link,
+          target: a.link ? "_blank" : "_self",
+          onContextmenu: x((N) => b(), ["prevent"])
         }, [
-          (t(!0), o(i, null, p(e.children, (r) => (t(), o("a", {
-            key: r.name,
-            class: "vp-tool-btn",
-            href: r.link,
-            target: r.link ? "_blank" : "_self",
-            onContextmenu: M((E) => k(), ["prevent"])
-          }, [
-            (t(), v(g(r.com), { class: "vp-tool-icon" }))
-          ], 40, T))), 128))
-        ], 2)), 64)),
-        u("div", {
-          class: m(["vp-tool-content", { active: a.length }])
+          (o(), m(f(a.com), { class: "vp-tool-icon" }))
+        ], 40, B))), 128))
+      ], 2)), 64)),
+      r("div", {
+        class: v(["vp-tool-content", { active: p.length }])
+      }, [
+        p.length ? (o(), c("div", {
+          key: 0,
+          class: "vp-tool-btn",
+          onClick: k
+        })) : C("", !0),
+        (o(), c(i, null, u(p, (t) => r("a", {
+          class: "vp-tool-btn",
+          key: t.name,
+          href: t.link,
+          target: t.link ? "_blank" : "_self"
         }, [
-          a.length ? (t(), o("div", {
-            key: 0,
-            class: "vp-tool-btn",
-            onClick: h
-          }, [
-            B(b)
-          ])) : O("", !0),
-          (t(), o(i, null, p(a, (e) => u("a", {
-            class: "vp-tool-btn",
-            key: e.name,
-            href: e.link,
-            target: e.link ? "_blank" : "_self"
-          }, [
-            (t(), v(g(e.com), { class: "vp-tool-icon" }))
-          ], 8, V)), 64))
-        ], 2)
-      ]);
-    };
+          (o(), m(f(t.com), { class: "vp-tool-icon" }))
+        ], 8, V)), 64))
+      ], 2)
+    ]));
   }
 });
-const L = (c, s) => {
-  const n = c.__vccOpts || c;
+const z = (e, s) => {
+  const n = e.__vccOpts || e;
   for (const [l, d] of s)
     n[l] = d;
   return n;
-}, N = /* @__PURE__ */ L(j, [["__scopeId", "data-v-2b17e345"]]), z = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, D = /* @__PURE__ */ z(w, [["__scopeId", "data-v-ba78cfb8"]]), E = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  VpTool: N
-}, Symbol.toStringTag, { value: "Module" })), D = (c) => ({
+  VpTool: D
+}, Symbol.toStringTag, { value: "Module" })), L = (e) => ({
   install(s) {
-    for (let [n, l] of Object.entries(z))
+    for (let [n, l] of Object.entries(E))
       s.component(n, l);
   }
 });
 export {
-  D as default
+  L as default
 };
